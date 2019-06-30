@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postinstall": "npm run getcontent",
+    "getcontent": "babel-node helpers/getContent.js install"
   }
 }
