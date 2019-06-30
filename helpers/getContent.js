@@ -1,10 +1,11 @@
-require('dotenv').config();
+import getConfig from 'next/config'
 import fs from 'fs';
 import path from 'path';
 import { createClient } from 'contentful';
 
-const SPACE = process.env.CONTENTFUL_SPACE
-const TOKEN = process.env.CONTENTFUL_TOKEN
+const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
+const SPACE = serverRuntimeConfig.CONTENTFUL_SPACE
+const TOKEN = serverRuntimeConfig.CONTENTFUL_TOKEN
 
 console.log(process.env);
 
