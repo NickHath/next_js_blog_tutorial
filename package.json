@@ -11,6 +11,6 @@
     "build": "next build",
     "start": "next start",
     "postinstall": "npm run getcontent",
-    "getcontent": "babel-node helpers/getContent.js install"
+    "getcontent": "babel-node helpers/getcontent.js install"
   }
 }

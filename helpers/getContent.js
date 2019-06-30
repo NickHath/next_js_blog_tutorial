@@ -5,6 +5,8 @@ import { createClient } from 'contentful';
 const SPACE = process.env.CONTENTFUL_SPACE
 const TOKEN = process.env.CONTENTFUL_TOKEN
 
+console.log(process.env);
+
 const client = createClient({
   space: SPACE,
   accessToken: TOKEN
@@ -14,7 +16,7 @@ const types = [
   'pageHome'
 ];
 
-export const getContent = async () => {
+export const getcontent = async () => {
   types.forEach(() => {
     const entries = await client.getEntries({
       content_type: type,
@@ -33,5 +35,5 @@ export const getContent = async () => {
 }
 
 if (process.argv[2] === 'install') {
-  getContent();
+  getcontent();
 }
